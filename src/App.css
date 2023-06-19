@@ -2,37 +2,317 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 66px;
+  padding-left: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-nav ul li {
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 5px solid #f9582a;
+  width: 90px;
+  text-align: center;
+  color: #f4562f;
+}
+
+.header-nav button {
+  cursor: pointer;
+  margin-right: 52px;
+}
+
+.header-nav .btn-addTopics {
+  border-radius: 0px;
+  background-color: #fa5a28;
+  color: #fff;
+  padding: 20px 22px 22px 17px;
+  margin-right: 100px;
+}
+
+.topic {
+  margin-bottom: 20px;
+}
+
+.topics-container{
+  margin: 40px;
+  padding: 0px 20px;
+  border-left: 3px solid #eeeeee;
+  border-top: 3px solid #eeeeee;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #eeeeee;
+}
+
+table th {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #eeeeee;
+}
+
+table td {
+  padding: 10px;
+  vertical-align: middle;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.btn {
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-yellow {
+  border: 1px solid #e8d58a;
+  background-color: #f7fedc;
+  color: #e4c471;
+}
+
+.btn-green {
+  border: 1px solid #54a390;
+  background-color: #e3fcf9;
+  color: #45b899;
+}
+
+.btn-red {
+  border: 1px solid #b76f7a;
+  background-color: #ffe4e5;
+  color: #ba7472;
+}
+
+.btn-default {
+  color: #ffc107;
+}
+
+.btn-delete {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-write {
+  border-radius: 0px;
+  background-color: #fa5a28;
+  color: #fff;
+  padding-top: 20px 21px 22px 15px;
+}
+
+/* ADDTOPICS.js */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.formAddTopics {
+  width: 400px;
+  height: 400px;
+  max-width: 100%;
+  box-shadow: 12px 12px 60px #2a2a276c;
+  border: 2px solid #e5e5e5;
+  padding: 20px 30px 20px 30px;
+  border-radius: 8px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.labelInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 36px;
+}
+
+.inputfied {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 26px;
+}
+
+.labelInput label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+
+.input-text {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.saveButton {
+  display: flex;
+  justify-content: center;
+}
+
+.saveButton button {
+  padding: 18px 34px;
+  font-size: 16px;
+  margin-top: 30px;
+  background-color: rgb(44, 44, 193);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+}
+
+.btn-cross{
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  margin-left: 381px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+/* Editor.js */
+
+.blog-editor {
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: left;
+  padding: 30px;
+  box-shadow: 12px 12px 60px #2a2a276c;
+  border: 2px solid #e5e5e5;
+  width: 45%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.blog-editor .editor-nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.blog-editor .editor-title {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 26px;
+}
+
+.blog-editor .editor-tone {
+  display: flex;
+  align-items: center;
+}
+
+.blog-editor .editor-tone label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.blog-editor select {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.blog-editor .editor-generate-button {
+  margin-left: 10px;
+  padding: 14px 16px;
+  background-color: blue;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.blog-editor .editor-textarea {
+  width: 100%;
+  resize: none;
+  height: 260px;
+}
+
+.blog-editor .image-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid black;
+  width: 100%;
+  height: 160px;
+}
+
+.blog-editor .selected-image {
+  max-width: 100%;
+  width: 120px;
+  height: 120px;
+  max-height: 300px;
+}
+
+.blog-editor .camera-image {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.blog-editor .camera-image img {
+  width: 68px;
+  height: 68px;
+}
+
+.blog-editor .upload-options {
+  margin-top: 10px;
+}
+
+.blog-editor .upload-label {
+  cursor: pointer;
+  padding: 6px 12px;
+  background-color: blue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blog-editor .file-input {
+  display: none;
 }
